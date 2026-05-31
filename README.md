@@ -1,5 +1,4 @@
 # Incident-Memory-Agent
-# Incident Memory Agent
 
 A Coral-powered incident memory layer for SRE workflows. Engineers can query past incidents, RCA history, and ticket context using a single SQL query instead of manually searching across raw tools or logs.
 
