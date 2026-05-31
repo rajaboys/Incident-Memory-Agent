@@ -1,0 +1,20 @@
+{"service_name":"auth-service","alert_id":"a1","severity":"critical","started_at":"2025-05-01T10:00:00Z","summary":"Auth latency spike","rca":"DB connection pool exhausted","ticket_key":"JIRA-101"}
+{"service_name":"auth-service","alert_id":"a2","severity":"high","started_at":"2025-05-10T08:30:00Z","summary":"Auth 5xx errors","rca":"Misconfigured feature flag","ticket_key":"JIRA-115"}
+{"service_name":"billing-service","alert_id":"b1","severity":"medium","started_at":"2025-05-03T14:20:00Z","summary":"Billing retries increased","rca":"Upstream gateway timeout","ticket_key":"JIRA-202"}
+{
+  "service_name": "auth-service",
+  "alert_id": "a1",
+  "severity": "critical",
+  "started_at": "2025-05-01T10:00:00Z",
+  "summary": "Auth latency spike",
+  "rca": "DB connection pool exhausted",
+  "ticket_key": "JIRA-101",
+  "ticket_title": "Auth latency spike due to exhausted DB pool",
+  "ticket_status": "Done",
+  "ticket_priority": "P1",
+  "owner_team": "Identity Platform",
+  "owner": "anita.k",
+  "resolution": "Raised max pool size, tuned idle timeout, and rolled restart during low traffic window",
+  "customer_impact": "Login requests saw elevated latency and intermittent failures for 18 minutes",
+  "follow_up": "Add pool saturation alert and load test auth DB connections"
+}

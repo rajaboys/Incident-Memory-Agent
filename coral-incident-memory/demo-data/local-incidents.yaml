@@ -1,0 +1,46 @@
+name: local_incidents
+version: 0.1.0
+dsl_version: 3
+backend: file
+
+test_queries:
+  - SELECT * FROM local_incidents.incidents LIMIT 1
+
+tables:
+  - name: incidents
+    description: Demo incident history (fake Datadog + Jira)
+    format: jsonl
+    source:
+      location: "file:///C:/Users/rajaramd/projects/coral-incident-memory/demo-data/"
+      glob: "**/*.jsonl"
+    columns:
+      - name: service_name
+        type: Utf8
+      - name: alert_id
+        type: Utf8
+      - name: severity
+        type: Utf8
+      - name: started_at
+        type: Utf8
+      - name: summary
+        type: Utf8
+      - name: rca
+        type: Utf8
+      - name: ticket_key
+        type: Utf8
+      - name: ticket_title
+        type: Utf8
+      - name: ticket_status
+        type: Utf8
+      - name: ticket_priority
+        type: Utf8
+      - name: owner_team
+        type: Utf8
+      - name: owner
+        type: Utf8
+      - name: resolution
+        type: Utf8
+      - name: customer_impact
+        type: Utf8
+      - name: follow_up
+        type: Utf8
